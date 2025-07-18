@@ -135,7 +135,7 @@ h3{
 
 .list{
     list-style: none;
-    color: var(--color-headings);
+ 
 }
 
 .list--inline .list__items{
@@ -146,6 +146,7 @@ h3{
 /* خود ایکون و تنظیمات مربوط به آن */
 .list--tick{
     list-style-image:url(../images/tick.svg);
+    color: var(--color-headings);
 }
 
 .list--tick .list__items{
@@ -595,12 +596,12 @@ h3{
 }
 
 .block--skewed-right{
-    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 90%);
     padding-bottom: calc(var(--paddiing-vertical) + 4rem);
 }
 
 .block--skewed-left{
-    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 90%, 0 100%);
     padding-bottom: calc(var(--paddiing-vertical) + 4rem);
 }
 
@@ -677,9 +678,6 @@ h3{
 
 /* hero */
 
-.hero{
-    clip-path: polygon(0% 0%, 100% 0, 100% 90%, 0 100%);
-}
 
 .hero__tagline{
     color: #b9c3cf;
@@ -762,5 +760,32 @@ h3{
 @media screen and (min-width:768px) {
     .feature:nth-of-type(even) .feature__content{
         order: 2;
+    }
+}
+
+/* showcase block */
+
+
+.showcase__image > img{
+    width: 100%;
+}
+
+.showcase .media{
+    margin-top: 3rem;
+}
+
+@media screen and (min-width:768px) {
+
+    .showcase .grid{
+        grid-template-columns: 50% 50%;
+    }
+
+    .showcase__image{
+        justify-self: end;
+    }
+
+    .showcase__image > img{
+        width: auto;
+        max-width: 700px;
     }
 }
